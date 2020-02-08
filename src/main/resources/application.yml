@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  address: 0.0.0.0
+spring:
+    profiles:
+        active: dev
+    application:
+        name: springboot-demo
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Hongkong
+        username: root
+        password: mysql!ytx%123
+        type: com.alibaba.druid.pool.DruidDataSource
+    jpa:
+        show-sql: false
+        database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+        hibernate:
+          ddl-auto: update
+    jackson:
+        date-format: yyyy-MM-dd HH:mm:ss
+        time-zone: Hongkong
