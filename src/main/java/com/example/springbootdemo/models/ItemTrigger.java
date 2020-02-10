@@ -7,7 +7,7 @@ import javax.persistence.Table;
 
 @Data
 @Entity
-@Table(name = "dm_item")
+@Table(name = "dm_item_trigger")
 public class ItemTrigger extends BaseModel {
 
     @Column(nullable = false)

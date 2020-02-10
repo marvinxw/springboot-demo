@@ -11,5 +11,9 @@ import javax.persistence.Table;
 public class Item extends BaseModel {
 
     @Column(nullable = false)
-    private String itemTriggerName;
+    private String itemName;
+
+    @OneToOne(cascade=CascadeType.REFRESH, fetch=FetchType.LAZY)
+    @JoinColumn(name = "itemId")
+    private ItemTrigger itemTrigger;
 }
